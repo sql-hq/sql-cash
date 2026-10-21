@@ -1,0 +1,1 @@
+{ "name": "@null-protocol/auth", "version": "0.1.0", "private": true, "type": "module", "exports": { ".": "./src/index.ts", "./server": "./src/server.ts" }, "scripts": { "typecheck": "tsc --noEmit" }, "dependencies": { "@null-protocol/sdk": "workspace:*", "viem": "2.37.3" } }

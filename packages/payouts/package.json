@@ -1,0 +1,20 @@
+{
+  "name": "@null-protocol/payouts",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./client": "./src/client.ts",
+    "./cre": "./src/cre.ts",
+    "./jobs": "./src/jobs.ts",
+    "./withdrawals": "./src/withdrawals.ts"
+  },
+  "scripts": { "typecheck": "tsc --noEmit", "test": "node --import tsx --test src/index.test.ts src/withdrawals.test.ts" },
+  "dependencies": {
+    "@null-protocol/sdk": "workspace:*",
+    "@null-protocol/ens": "workspace:*",
+    "@null-protocol/client": "workspace:*",
+    "viem": "2.37.3"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "sql-cash",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "packageManager": "pnpm@11.11.0",
+  "author": "SQL Cash <support@sql.cash>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sql-hq/sql-cash.git"
+  },
+  "homepage": "https://sql.cash",
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env scripts/web.mjs dev",
+    "build": "node --env-file-if-exists=.env scripts/web.mjs build",
+    "start": "node --env-file-if-exists=.env scripts/server.mjs",
+    "typecheck": "pnpm --filter @null-protocol/web typecheck",
+    "test": "node --test scripts/rpc-gateway.test.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.0",
+    "esbuild": "0.25.12",
+    "tsx": "4.20.5",
+    "typescript": "5.9.3"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "@null-protocol/contracts",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": { ".": "./src/index.ts" },
+  "dependencies": { "circomlibjs": "0.1.7", "viem": "2.37.3" },
+  "scripts": { "build": "node ../../contracts/scripts/build.mjs" }
+}

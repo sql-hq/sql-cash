@@ -1,0 +1,9 @@
+{
+  "name": "@null-protocol/ens",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": { ".": "./src/index.ts" },
+  "scripts": { "typecheck": "tsc --noEmit", "test": "node --import tsx --test src/index.test.ts" },
+  "dependencies": { "@null-protocol/crypto": "workspace:*", "viem": "2.37.3" }
+}

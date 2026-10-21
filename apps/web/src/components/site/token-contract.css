@@ -1,0 +1,60 @@
+.lp-token-contract {
+  position: relative;
+  min-width: 0;
+  max-width: 100%;
+  margin-top: 18px;
+  padding: 10px 14px 14px;
+  border: 1px solid color-mix(in srgb, currentColor 22%, transparent);
+  background: color-mix(in srgb, currentColor 3%, transparent);
+}
+.lp-token-contract-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 5px;
+}
+.lp-token-contract-label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+  min-width: 0;
+}
+.lp-token-contract-label strong { font-size: .88rem; letter-spacing: .06em; }
+.lp-token-contract-label > span { font-size: .72rem; opacity: .82; }
+.lp-token-copy {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-width: 72px;
+  min-height: 44px;
+  padding: 0 9px;
+  border: 1px solid color-mix(in srgb, currentColor 25%, transparent);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: .73rem;
+  cursor: pointer;
+}
+.lp-token-copy:hover { background: color-mix(in srgb, currentColor 9%, transparent); }
+.lp-token-copy:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+.lp-token-contract-address {
+  display: block;
+  max-width: 100%;
+  font-size: clamp(.69rem, 1.05vw, .8rem);
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+  user-select: all;
+}
+.lp-token-copy-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.lp-token-copy-error { margin: 9px 0 0; font-size: .75rem; line-height: 1.5; }

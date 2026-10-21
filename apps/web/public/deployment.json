@@ -1,0 +1,74 @@
+{
+  "status": "deployed",
+  "protocolVersion": "0.3.0",
+  "chainId": 11155111,
+  "deploymentBlock": 11695406,
+  "asset": {
+    "symbol": "USDC",
+    "decimals": 6,
+    "address": "0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238"
+  },
+  "contracts": {
+    "nullPool": "0x17A41574900ca3120562Ae5616559EceebA74E36",
+    "nullAuthRegistry": "0x126ec72460f84f8DDC7A81aCE153982373b92DE9",
+    "poseidon3": "0x85B196B8c8721ECCB5723864642D702c3B7054Bc",
+    "shieldVerifier": "0x3637802C52421Cadb6420d2A529515E3A1bD9aAF",
+    "createDistributionVerifier": "0x016Cd5EB253e57a507432a24CE71F919DE503040",
+    "claimVerifier": "0x4b1a60aC45E08503Be4660956Cb48E90ac2A9257",
+    "withdrawVerifier": "0xa7605191B82657B3e91cA198cBb0f32ce2503A22",
+    "partialWithdrawVerifier": "0x8Ff182757c668973FA243A2BB630dC755Eb6057F"
+  },
+  "codeHashes": {
+    "asset": "0xcd3f29e2ea9c61dadd48bfeaf8b2884b6de9dfee7bf45329452c4c33d0868ceb",
+    "nullPool": "0x78b5e1df051f34c4d03e122718f7ddda09af45a90aa8992a60fe505430cde86a",
+    "nullAuthRegistry": "0xec3481489bd20d80bc04b10db68f1224b00a5e486b230e86f3b06d896883565f",
+    "poseidon3": "0xe247ac4f3d40602f0ac0604b0f1fe631237cbc64d3e29a5d5e45721f2d94fa81",
+    "shieldVerifier": "0x9b7c32dff923ae4ef0534ba37b6b77aa5533bcb9bda4135427091e7f3ee63c7f",
+    "createDistributionVerifier": "0x75b24b1d288c900a303aebe396bcbbe0d4447b3d42eeb50447bccc3cacab1be4",
+    "claimVerifier": "0xbe98366e90a09ee514faee2de5a011f481c1096d66fd7293e5968276566d534d",
+    "withdrawVerifier": "0xbc3abba4c460ad0327e5533ff03a9e04a35b115eb1c4b3555c15b95d888de343",
+    "partialWithdrawVerifier": "0xf43b36bb178bc6454c5877d3271ed09d0876a1313eacf22859d112f217a825b7"
+  },
+  "libraries": {
+    "src/generated/ShieldVerifier.sol:RelationsLib": {
+      "address": "0x28b3C36eF23139272c80Df5A492B42309bA39e0A",
+      "codeHash": "0xc62aac57dc03ea4aa98a9bfbd2a2b884c381b773f1bb7e1ce82d4f3455eefec3"
+    },
+    "src/generated/ShieldVerifier.sol:ZKTranscriptLib": {
+      "address": "0x13CeC0cF52377B7db6FdD78a44438A97903CD90c",
+      "codeHash": "0x65f47b12845e1f9b27f39e6e70a309cfc1147eabd94e205dc55b90f1a6a8d5e5"
+    },
+    "src/generated/CreateDistributionVerifier.sol:RelationsLib": {
+      "address": "0x28b3C36eF23139272c80Df5A492B42309bA39e0A",
+      "codeHash": "0xc62aac57dc03ea4aa98a9bfbd2a2b884c381b773f1bb7e1ce82d4f3455eefec3"
+    },
+    "src/generated/CreateDistributionVerifier.sol:ZKTranscriptLib": {
+      "address": "0x13CeC0cF52377B7db6FdD78a44438A97903CD90c",
+      "codeHash": "0x65f47b12845e1f9b27f39e6e70a309cfc1147eabd94e205dc55b90f1a6a8d5e5"
+    },
+    "src/generated/ClaimVerifier.sol:RelationsLib": {
+      "address": "0x28b3C36eF23139272c80Df5A492B42309bA39e0A",
+      "codeHash": "0xc62aac57dc03ea4aa98a9bfbd2a2b884c381b773f1bb7e1ce82d4f3455eefec3"
+    },
+    "src/generated/ClaimVerifier.sol:ZKTranscriptLib": {
+      "address": "0x13CeC0cF52377B7db6FdD78a44438A97903CD90c",
+      "codeHash": "0x65f47b12845e1f9b27f39e6e70a309cfc1147eabd94e205dc55b90f1a6a8d5e5"
+    },
+    "src/generated/WithdrawVerifier.sol:RelationsLib": {
+      "address": "0x28b3C36eF23139272c80Df5A492B42309bA39e0A",
+      "codeHash": "0xc62aac57dc03ea4aa98a9bfbd2a2b884c381b773f1bb7e1ce82d4f3455eefec3"
+    },
+    "src/generated/WithdrawVerifier.sol:ZKTranscriptLib": {
+      "address": "0x13CeC0cF52377B7db6FdD78a44438A97903CD90c",
+      "codeHash": "0x65f47b12845e1f9b27f39e6e70a309cfc1147eabd94e205dc55b90f1a6a8d5e5"
+    },
+    "src/generated/PartialWithdrawVerifier.sol:RelationsLib": {
+      "address": "0x28b3C36eF23139272c80Df5A492B42309bA39e0A",
+      "codeHash": "0xc62aac57dc03ea4aa98a9bfbd2a2b884c381b773f1bb7e1ce82d4f3455eefec3"
+    },
+    "src/generated/PartialWithdrawVerifier.sol:ZKTranscriptLib": {
+      "address": "0x13CeC0cF52377B7db6FdD78a44438A97903CD90c",
+      "codeHash": "0x65f47b12845e1f9b27f39e6e70a309cfc1147eabd94e205dc55b90f1a6a8d5e5"
+    }
+  }
+}

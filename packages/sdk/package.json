@@ -1,0 +1,5 @@
+{
+  "name": "@null-protocol/sdk", "version": "0.1.0", "private": true, "type": "module",
+  "exports": { ".": "./src/index.ts" }, "scripts": { "typecheck": "tsc --noEmit" },
+  "dependencies": { "@null-protocol/crypto": "workspace:*", "@null-protocol/protocol": "workspace:*" }
+}

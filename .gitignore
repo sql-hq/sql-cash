@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.pnpm-store/
+.env
+.env.*
+!.env.example
+coverage/
+*.log
+*.tgz
+*.zip
+*.pem
+*.key
+backups/
+private/

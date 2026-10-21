@@ -1,0 +1,71 @@
+.developer-page { max-width: 1320px; margin: 0 auto; padding: 0 44px; }
+.developer-header, .developer-header nav, .developer-footer { display: flex; align-items: center; }
+.developer-header { min-height: 100px; justify-content: space-between; gap: 24px; border-bottom: 1px solid var(--line); }
+.developer-header .brand { padding: 0; }
+.developer-header nav { gap: 28px; flex-wrap: wrap; }
+.developer-header nav a, .developer-header nav button, .developer-footer a { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; min-height: 44px; padding: 0; }
+.developer-page a:hover, .developer-header nav button:hover { text-decoration: underline; text-underline-offset: 5px; }
+.developer-page main { outline: none; }
+.developer-intro { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); align-items: center; gap: 60px; padding: 86px 0 72px; }
+.developer-intro h1 { font-size: clamp(36px, 4.5vw, 60px); font-weight: 550; line-height: 1.1; letter-spacing: -.035em; }
+.developer-intro p { margin-top: 24px; font-size: 16px; line-height: 1.8; color: var(--secondary); max-width: 49ch; }
+.developer-intro .button-row { margin-top: 30px; }
+.developer-intro .developer-availability { font-size: 12px; margin-top: 24px; }
+.developer-code { min-width: 0; border-radius: 14px; background: var(--surface); box-shadow: var(--raised); overflow: hidden; }
+.developer-code-heading { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 10px 22px; border-bottom: 1px solid var(--line); font-size: 12px; color: var(--secondary); }
+.developer-code-heading button { display: flex; gap: 6px; align-items: center; min-height: 44px; font-size: 12px; padding: 0 4px; }
+.developer-code pre { margin: 0; padding: 25px 22px; overflow: auto; line-height: 1.85; tab-size: 2; }
+.developer-code code { font-size: 12px; overflow-wrap: normal; }
+.developer-copy-error { display: block; color: var(--danger); padding: 0 22px 16px; }
+.developer-contract { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; padding: 32px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.developer-page h2 { font-size: 23px; font-weight: 550; line-height: 1.4; }
+.developer-contract h2 { font-size: 17px; }
+.developer-contract p, .developer-start p, .developer-example p, .developer-boundaries p { color: var(--secondary); font-size: 14px; line-height: 1.8; margin-top: 14px; max-width: 70ch; }
+.developer-start, .developer-example { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 60px; padding: 70px 0; scroll-margin-top: 24px; }
+.developer-doc-link { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; min-height: 44px; text-decoration: underline; text-underline-offset: 4px; }
+.developer-start .developer-doc-link { margin-top: 14px; }
+.developer-example { border-top: 1px solid var(--line); }
+.developer-example form { min-width: 0; padding: 28px; box-shadow: var(--raised); border-radius: 14px; }
+.developer-example fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+.developer-example .field { margin-bottom: 18px; }
+.developer-example .field-hint { font-size: 12px; }
+.developer-result { margin-top: 22px; padding-top: 20px; border-top: 1px solid var(--line); display: grid; gap: 9px; }
+.developer-result strong { color: var(--success); display: flex; align-items: center; gap: 6px; }
+.developer-result span { font-size: 12px; color: var(--secondary); }
+.developer-result code { word-break: break-all; }
+.developer-lifecycle { padding: 20px 0 60px; }
+.developer-lifecycle ol { list-style: none; padding: 0; margin: 25px 0 0; counter-reset: payout-step; }
+.developer-lifecycle li { counter-increment: payout-step; display: grid; grid-template-columns: 28px 175px minmax(0, 1fr); gap: 20px; padding: 22px 0; border-top: 1px solid var(--line); align-items: baseline; }
+.developer-lifecycle li::before { content: counter(payout-step); color: var(--muted); font-variant-numeric: tabular-nums; }
+.developer-lifecycle h3 { font-size: 14px; }
+.developer-lifecycle p { font-size: 14px; line-height: 1.7; color: var(--secondary); }
+.developer-boundaries { padding: 38px 0 45px; border-top: 1px solid var(--line); }
+.developer-boundaries > div:first-of-type { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+.developer-boundaries .button-row { margin-top: 16px; gap: 28px; }
+.developer-footer { border-top: 1px solid var(--line); gap: 28px; padding: 20px 0 32px; color: var(--secondary); font-size: 12px; flex-wrap: wrap; }
+.developer-footer > span { margin-right: auto; }
+@media (max-width: 1000px) {
+  .developer-page { padding: 0 28px; }
+  .developer-intro, .developer-start, .developer-example { gap: 32px; }
+  .developer-intro { padding-top: 60px; }
+}
+@media (max-width: 760px) {
+  .developer-page { padding: 0 20px; }
+  .developer-header { padding: 20px 0; align-items: flex-start; flex-direction: column; gap: 12px; }
+  .developer-header nav { gap: 18px; }
+  .developer-header nav a, .developer-header nav button { font-size: 12px; }
+  .developer-intro, .developer-start, .developer-example { grid-template-columns: minmax(0, 1fr); gap: 30px; padding: 42px 0; }
+  .developer-intro p { font-size: 15px; }
+  .developer-contract { gap: 28px; }
+  .developer-contract h2 { font-size: 16px; }
+  .developer-lifecycle { padding-bottom: 35px; }
+  .developer-lifecycle li { grid-template-columns: 22px minmax(0, 1fr); gap: 8px 12px; }
+  .developer-lifecycle p { grid-column: 2; }
+  .developer-boundaries > div:first-of-type { grid-template-columns: 1fr; gap: 0; }
+  .developer-example form { padding: 22px; }
+}
+@media (max-width: 400px) {
+  .developer-contract { grid-template-columns: 1fr; }
+  .developer-header nav { gap: 12px; }
+  .developer-footer { gap: 12px; }
+}

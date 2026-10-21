@@ -1,0 +1,91 @@
+.payment-modal { --modal-padding: 28px; --modal-inline-padding: 32px; --modal-bottom-padding: 8px; width: min(720px, calc(100vw - 32px)); }
+.payment-modal::backdrop { background: rgb(26 34 43 / 44%); backdrop-filter: blur(9px); -webkit-backdrop-filter: blur(9px); }
+.payment-modal .modal-heading { margin-bottom: 26px; }
+.payment-modal .modal-heading h2 { font-size: 22px; }
+.payment-modal .modal-actions { position: sticky; bottom: 0; background: var(--surface); margin-top: 24px; padding: 18px 0 22px; border-top: 1px solid var(--line); z-index: 1; }
+.payment-modal .modal-actions .button-primary { margin-left: auto; }
+.payment-journey { margin-bottom: 24px; }
+.payment-journey-summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.payment-amount { display: flex; align-items: baseline; gap: 9px; font-size: 32px; line-height: 1.2; letter-spacing: -.03em; font-weight: 550; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.payment-amount small { font-size: 13px; font-weight: 400; color: var(--secondary); letter-spacing: 0; }
+.payment-privacy { display: inline-flex; align-items: center; gap: 6px; color: var(--success); font-size: 12px; }
+.payment-privacy.is-public { color: var(--warning); }
+.payment-route { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 18px; margin: 24px 0; padding: 18px 0; border-block: 1px solid var(--line); }
+.payment-route > div { min-width: 0; }
+.payment-route > div > span { display: block; color: var(--muted); font-size: 12px; margin-bottom: 6px; }
+.payment-route bdi { display: block; font-size: 16px; font-weight: 550; overflow-wrap: anywhere; }
+.payment-route-arrow { color: var(--muted); }
+.payment-location { display: flex; align-items: baseline; gap: 7px; font-size: 12px; line-height: 1.6; color: var(--secondary); margin: -10px 0 22px; }
+.payment-location svg { flex-shrink: 0; align-self: center; color: var(--success); }
+.payment-recipients { margin: -10px 0 22px; font-size: 13px; }
+.payment-recipients summary, .payment-how summary, .payment-wallet-options > summary, .payment-organization-settings > summary { cursor: pointer; padding: 10px 0; color: var(--secondary); font-size: 13px; }
+.payment-recipients ul { padding: 0; margin: 8px 0; list-style: none; }
+.payment-recipients li { display: flex; justify-content: space-between; gap: 18px; padding: 8px 0; border-bottom: 1px solid var(--line); }
+.payment-recipients bdi { overflow-wrap: anywhere; min-width: 0; }
+.payment-recipients li > span { flex-shrink: 0; font-variant-numeric: tabular-nums; }
+.payment-steps { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); padding: 0; margin: 0 0 24px; list-style: none; gap: 6px; }
+.payment-steps li { position: relative; display: flex; flex-direction: column; gap: 8px; color: var(--muted); font-size: 11px; line-height: 1.4; }
+.payment-steps li::after { content: ''; position: absolute; left: 31px; top: 12px; height: 1px; right: 0; background: var(--line); }
+.payment-steps li:last-child::after { display: none; }
+.payment-steps li > span:first-child { display: grid; place-items: center; width: 25px; height: 25px; border: 1px solid var(--line-strong); border-radius: 50%; font-variant-numeric: tabular-nums; }
+.payment-steps .is-current { color: var(--ink); font-weight: 600; }
+.payment-steps .is-current > span:first-child { background: var(--ink); color: white; border-color: var(--ink); }
+.payment-steps .is-complete { color: var(--success); }
+.payment-steps .is-complete > span:first-child { background: var(--success-bg); border-color: var(--success); }
+.payment-current { position: relative; padding: 20px; background: #e2e8ed; border-radius: 12px; overflow: hidden; }
+.payment-current-count { font-size: 12px; color: #435360; margin-bottom: 9px; }
+.payment-current h3 { font-size: 20px; line-height: 1.3; font-weight: 550; animation: payment-step-arrive 180ms cubic-bezier(.16, 1, .3, 1); }
+.payment-current p { color: #435360; font-size: 13px; line-height: 1.7; margin-top: 8px; max-width: 66ch; }
+.payment-current.is-uncertain { background: var(--warning-bg); }
+.payment-current.is-uncertain :is(p, .payment-current-count) { color: var(--warning); }
+.payment-working-line { position: absolute; bottom: 0; left: 0; width: 30%; height: 2px; background: var(--focus); animation: payment-working 2.2s ease-in-out infinite; }
+.payment-how { margin-top: 10px; }
+.payment-how summary { display: flex; align-items: center; gap: 8px; text-decoration: underline; text-decoration-color: var(--line-strong); text-underline-offset: 4px; }
+.payment-how dl { margin: 10px 0 20px; }
+.payment-how dl > div { margin-bottom: 14px; }
+.payment-how dt { font-size: 12px; font-weight: 600; margin-bottom: 4px; }
+.payment-how dd { margin: 0; font-size: 13px; color: var(--secondary); line-height: 1.7; }
+.payment-wallet-options, .payment-organization-settings { border-bottom: 1px solid var(--line); padding-bottom: 10px; margin-bottom: 20px; }
+.payment-wallet-options[open] > summary, .payment-organization-settings[open] > summary { margin-bottom: 12px; }
+.payment-modal .section-block { margin-top: 20px; }
+.payment-modal .section-block h3 { margin-bottom: 10px; font-size: 16px; }
+.payment-modal .checkbox-field { padding: 12px 0; }
+.payment-stage-detail { font-size: 12px; color: var(--secondary); margin-top: 12px; line-height: 1.6; }
+.ens-entry { width: min(640px, 100%); }
+.ens-entry form { margin-top: 24px; }
+.ens-entry .setup-progress { flex-wrap: wrap; gap: 12px; font-size: 12px; }
+.ens-entry-status { display: flex; align-items: flex-start; gap: 12px; padding: 18px 0; margin: 20px 0 10px; border-block: 1px solid var(--line); }
+.ens-entry-status > svg { flex-shrink: 0; margin-top: 2px; }
+.ens-entry-status strong { font-size: 14px; overflow-wrap: anywhere; }
+.ens-entry-status p { font-size: 13px; color: var(--secondary); line-height: 1.7; margin-top: 5px; }
+.ens-entry-status.is-linked > svg { color: var(--success); }
+.ens-entry .entry-hint { line-height: 1.7; }
+.ens-entry .progressive-details code { display: block; overflow-wrap: anywhere; font-size: 12px; }
+.ens-entry-recovery { padding-top: 14px; }
+.ens-entry-recovery p { font-size: 13px; color: var(--secondary); line-height: 1.6; margin-bottom: 12px; }
+@keyframes payment-step-arrive { from { transform: translateY(3px); } to { transform: translateY(0); } }
+@keyframes payment-working { 0% { transform: translateX(-110%); } 100% { transform: translateX(450%); } }
+@media (max-width: 600px) {
+  .payment-modal { --modal-padding: 22px; --modal-inline-padding: 20px; --modal-max-height: calc(100dvh - 20px); width: calc(100vw - 20px); }
+  .payment-amount { font-size: 28px; }
+  .payment-route { grid-template-columns: minmax(0, 1fr); gap: 12px; margin: 20px 0; }
+  .payment-route > div { display: grid; grid-template-columns: 32px minmax(0, 1fr); align-items: baseline; gap: 12px; }
+  .payment-route > div > span { margin: 0; }
+  .payment-route-arrow { display: none; }
+  .payment-route bdi { font-size: 14px; }
+  .payment-steps { gap: 4px; }
+  .payment-steps li { font-size: 10px; }
+  .payment-steps li > span:last-child { max-width: 9ch; }
+  .payment-current { padding: 18px; }
+  .payment-current h3 { font-size: 18px; }
+  .payment-modal .modal-actions { padding-bottom: 18px; }
+  .payment-modal .modal-actions > .button { flex: initial; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .payment-current h3, .payment-working-line { animation: none; transform: none; }
+  .payment-working-line { width: 100%; }
+}
+@media (forced-colors: active) {
+  .payment-current, .payment-steps li > span:first-child { border: 1px solid CanvasText; }
+  .payment-modal::backdrop { backdrop-filter: none; }
+}
